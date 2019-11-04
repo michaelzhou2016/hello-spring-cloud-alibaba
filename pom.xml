@@ -13,6 +13,9 @@
         <module>nacos-discovery-provider-example</module>
         <module>nacos-discovery-consumer-example</module>
         <module>spring-cloud-gateway-example</module>
+        <module>alibaba-dubbo-api</module>
+        <module>alibaba-dubbo-server</module>
+        <module>alibaba-dubbo-client</module>
     </modules>
 
     <parent>
