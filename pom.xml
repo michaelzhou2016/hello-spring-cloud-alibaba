@@ -8,7 +8,7 @@
     <artifactId>spring-cloud-alibaba-example</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    
+
     <modules>
         <module>nacos-discovery-provider-example</module>
         <module>nacos-discovery-consumer-example</module>
@@ -16,6 +16,7 @@
         <module>alibaba-dubbo-api</module>
         <module>alibaba-dubbo-server</module>
         <module>alibaba-dubbo-client</module>
+        <module>spring-boot-admin</module>
     </modules>
 
     <parent>
@@ -31,6 +32,7 @@
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
         <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
+        <spring-boot-admin.version>2.1.6</spring-boot-admin.version>
     </properties>
 
     <dependencyManagement>
@@ -46,6 +48,13 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-dependencies</artifactId>
+                <version>${spring-boot-admin.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
