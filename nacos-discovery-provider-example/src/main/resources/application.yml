@@ -7,13 +7,13 @@ spring:
         server-addr: 127.0.0.1:8848
   profiles:
     active: producer1
-  boot:
-    admin:
-      client:
-        url: http://localhost:8020
-        instance:
-          prefer-ip: true
-          service-url: http://192.168.1.23:9000
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:8020
+#        instance:
+#          prefer-ip: true
+#          service-url: http://192.168.1.23:9000
 management:
   endpoints:
     web:
