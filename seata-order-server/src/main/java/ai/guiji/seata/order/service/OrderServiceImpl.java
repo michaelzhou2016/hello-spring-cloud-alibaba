@@ -4,6 +4,7 @@ import ai.guiji.seata.order.dao.OrderDao;
 import ai.guiji.seata.order.entity.Order;
 import ai.guiji.seata.order.feign.AccountApi;
 import ai.guiji.seata.order.feign.StorageApi;
+import com.alibaba.fastjson.JSON;
 import io.seata.spring.annotation.GlobalTransactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,7 +39,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     @GlobalTransactional(name = "fsp-create-order", rollbackFor = Exception.class)
     public void create(Order order) {
-        LOGGER.info("------->交易开始");
+        LOGGER.info("------->交易开始, order:{}", JSON.toJSONString(order));
         //本地方法
         orderDao.create(order);
 
