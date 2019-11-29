@@ -17,6 +17,9 @@
         <module>alibaba-dubbo-server</module>
         <module>alibaba-dubbo-client</module>
         <module>spring-boot-admin</module>
+        <module>seata-storage-server</module>
+        <module>seata-account-server</module>
+        <module>seata-order-server</module>
     </modules>
 
     <parent>
@@ -64,6 +67,12 @@
                 <version>${spring-boot-admin.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.10</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -1,0 +1,20 @@
+server:
+  port: 8083
+management:
+  endpoints:
+    web:
+      cors:
+        allowed-methods: '*'
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 123456
+    url: jdbc:mysql://172.16.1.109:3306/db_account
+    username: root
+logging:
+  level:
+    io:
+      seata: info
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: ai.guiji.seata.account.entity
