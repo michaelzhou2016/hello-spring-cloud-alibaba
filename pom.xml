@@ -20,6 +20,7 @@
         <module>seata-storage-server</module>
         <module>seata-account-server</module>
         <module>seata-order-server</module>
+        <module>oauth2-server</module>
     </modules>
 
     <parent>
